@@ -8,6 +8,18 @@ namespace DevFreela.Core.Entities
 {
     public class CalendarioCQ
     {
+        public CalendarioCQ(string mes, int dia, string titulo, string descricao)
+        {
+            Mes = mes;
+            Dia = dia;
+            Titulo = titulo;
+            Descricao = descricao;
+
+            IsFinished = false;
+            IsExcluded = false;
+            MotivoExclusao = " ";
+        }
+
         public string Mes { get; private set; }
         public int Dia { get; private set; }
         public string Titulo { get; private set; }

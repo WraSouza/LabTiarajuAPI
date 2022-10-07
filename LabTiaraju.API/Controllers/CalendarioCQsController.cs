@@ -41,15 +41,24 @@ namespace LabTiaraju.API.Controllers
 
         //api/calendariocqs/numero_qualquer
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] UpdateProjectInputModel inputModel)
-        {
-            if (inputModel.Description.Length > 50)
-            {
-                return BadRequest();
-            }            
+        public IActionResult Put(int id)
+        {           
 
             //PUT não retorna nada
             return NoContent();
         }
+
+        ////api/calendariocqs/numero_qualquer
+        //[HttpPut("{id}")]
+        //public IActionResult Put(int id, [FromBody] UpdateProjectInputModel inputModel)
+        //{
+        //    if (inputModel.Description.Length > 50)
+        //    {
+        //        return BadRequest();
+        //    }            
+
+        //    //PUT não retorna nada
+        //    return NoContent();
+        //}
     }
 }
